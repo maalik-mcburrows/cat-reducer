@@ -1,12 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { setActivity } from '../redux/actions';
+import { setActivity, setName } from '../redux/actions';
 
 
-const Activity = ({ name, activity, setActivity }) => (
+const Activity = ({ name, activity, setActivity, setName }) => (
     <>
         <h1>What's the Cat Doing?</h1>
         <p>{ name } is { activity }</p>
+        <button onClick={() =>setName('Garfield')}>Change Name</button>
         <button onClick={() => setActivity('eating')}>Eating</button>
         <button onClick={() => setActivity('playing')}>Playing</button>
         <button onClick={() => setActivity('napping')}>Napping</button>
@@ -22,7 +23,7 @@ const mapStateToProps = state => {
 
 export default connect(
      mapStateToProps, //mapStateToProps
-     { setActivity } //mapDispatchToProps
+     { setActivity, setName } //mapDispatchToProps
      )(Activity);
 
 
