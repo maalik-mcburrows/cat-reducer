@@ -1,10 +1,12 @@
 import React from 'react';
-import Activity from './components/activity';
+import CatList from './components/catList';
+import AddCat from './components/addCat';
 
 function App() {
   return (
     <div className="App">
-      <Activity />
+      <CatList />
+      <AddCat />
     </div>
   );
 }
