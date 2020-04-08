@@ -18,8 +18,8 @@ const Activity = ({ name, activity, setActivity }) => (
 //connect connects us to redux, parameters include things we want(mapStateToProps) from connect and things we want to do(mapDispatchToProps) from connect
 
 const mapStateToProps = state => {
-    const { activity } = state;
-    return activity;
+    const { activity, name } = state;
+    return { activity, name };
 }
 
 export default connect(
